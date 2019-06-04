@@ -1,12 +1,10 @@
 fun main(args: Array<String>) {
 
-    /*
-        Kotlin has two types of variables
-        primitive type
-        reference type
-     */
+    // Type of a variable is inferred by the compiler in Kotlin
 
-    var saySomething: String = "hello"
-    println(saySomething)
+    var sayHello: String = "hello"
+    var sayBye = "bye"
+
+    println("$sayHello Watermelon. $sayBye Watermelon")
 
 }

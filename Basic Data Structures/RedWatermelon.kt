@@ -9,5 +9,5 @@ fun main(args : Array<String>) {
 
     var soManyWatermelons = Array<String>(size, { _ -> "watermelon"})
     println("This is an watermelon array, and guess what it contains? ------ ${soManyWatermelons[2]}!!")
-
+    soManyWatermelons.forEach{watermelon -> println(watermelon)}
 }   

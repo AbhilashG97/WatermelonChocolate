@@ -19,5 +19,4 @@ fun main(args : Array<String>) {
     var doubleArray = doubleArrayOf(212.32323, 323434.332, 323.543)
 
     println(doubleArray[1])
-
 }

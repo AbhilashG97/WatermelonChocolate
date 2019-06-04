@@ -1,8 +1,8 @@
 fun main(args: Array<String>) {
 
     // Elvis Operator
-    var badVegetable = null
-    var badVegetableLength = badVegetable ?: "Bitter Gaurd"
+    var badVegetable : String? = null
+    var badVegetableLength : Int? = badVegetable?.length ?: 0
     println("I don't like this vegetable - $badVegetableLength")
 
     var someNumber : Int? = null

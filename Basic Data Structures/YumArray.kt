@@ -1,4 +1,4 @@
-fun main (args : Array<String>) {
+.fun main (args : Array<String>) {
 
     var myArray = intArrayOf(12, 432, 4, 3, 99)
     println(myArray.get(0))
