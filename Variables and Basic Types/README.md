@@ -8,9 +8,9 @@ We can declare variables in Kotlin using ```var``` and ```val```.
 
 ```val``` is used to declare immutable variables, i.e. their value cannot be changed after declaring them. 
 
-You can find a simple example [here](Yum.kt) and [here](RedJam.kt).
+You can find examples [here](/Variables%20and%20Basic%20Types/Yum.kt) and [here](/Variables%20and%20Basic%20Types/RedJam.kt).
 
-:warning: If we try to assign a new value to a ```val``` variable, compilation error wil be thrown. 
+:warning: If we try to assign a new value to a ```val``` variable, compilation error will occur. 
 
 :boom: Variables declared with ```val``` cannot be left uninitialized  unless their type is specified. An example is given below -
 
@@ -21,13 +21,13 @@ val favoriteFruit: String; // This will compile
 ```
 :boom: It is not possible to declare multiple variables in the same line in ```Kotlin```.
 
-:exclamation: The type of a varible is inferred by the compiler in Kotlin. Look [here](Silver.kt) for an example.
+:exclamation: The type of a variable is inferred by the compiler in ```Kotlin```. Look [here](/Variables%20and%20Basic%20Types/Silver.kt) for an example.
 
-:boom: ```var``` and ```val``` have to be used to declare a varible. A variable cannot be declared withou them. 
+:boom: ```var``` and ```val``` have to be used to declare a variable. A variable cannot be declared without them. 
 
 ## Basic Types
 
-In Kotlin all types are Objects.
+In ```Kotlin``` **all types** are ```Objects```.
 
 Some of them are listed below - 
 
@@ -40,7 +40,7 @@ Some of them are listed below -
 | Float         | 4 bytes               |
 | Double        | 8 bytes               |
 
-:warning: To represent Float and Long values ```F``` and ```L``` suffixed at the end of the values. 
+:warning: To represent ```Float``` and ```Long``` values ```F``` and ```L``` are suffixed at the end. 
 
 :warning: Similarly, hex and binary values are represented by prefixing ```0x``` and ```0b``` repectively. Examples are shown below.
 
@@ -65,7 +65,7 @@ The helper functions are as follows -
 1.  ```toString()```
 1.  ```toChar()```
 
-:warning: Using ```toInt()``` on Long will truncate the value.
+:warning: Using ```toInt()``` on Long will truncate the value of the ```Long``` variable.
 
 ## Other Data Types
 
@@ -77,9 +77,9 @@ The helper functions are as follows -
 
 1.  **String**
 
-    Strings can be created with double or triple quotes. An exmaple can be found [here](LalMirchi.kt).
+    Strings can be created with double or triple quotes. An exmaple can be found [here](/Variables%20and%20Basic%20Types/LalMirchi.kt).
 
-:boom: String interpolation is possible is ```Kotlin```. The ```$``` can also be used to evaluate expressions inside in a String.
+:boom: String interpolation is possible is ```Kotlin```. The ```$``` symbol can also be used to evaluate expressions inside a String.
 
 
 ## Arrays
@@ -96,11 +96,12 @@ Some of the utilty functions are as follows -
 1.  ```intArrayOf()```
 1.  ```charArrayOf()```
 1.  ```byteArrayOf()```
+1. .....
 
 and so on. 
 
 :warning: Also, please have a look at [this](https://stackoverflow.com/questions/44239869/whats-the-kotlin-equivalent-of-javas-string) StackOverflow post. 
 
-Exmaples can be found [here](MelonArray.kt)
+:star: Exmaples can be found [here](/Variables%20and%20Basic%20Types/MelonArray.kt)
 
 :warning: Please have a look at [this](https://stackoverflow.com/questions/44239869/whats-the-kotlin-equivalent-of-javas-string) StackOverflow post.
