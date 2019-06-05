@@ -62,7 +62,7 @@ Some of the properties and functions of a Collection are given below -
 |-------------------------------------|------------------------------------------------------------------------------------------------|
 | size                                | this property returns the size of the collection.                                              |
 | isEmpty()                           | returns true if the collection is empty or false otherwise.                                    |
-| contains(element: E)                | eturns true if the element specified in the argument is present in the collection.             |
+| contains(element: E)                | returns true if the element specified in the argument is present in the collection.             |
 | containsAll(element: Collection<E>) | returns true if the element in the collection passed as argument is present in the collection. |
 
 Some of the properties and functions of a MutableCollection are given below -
@@ -71,18 +71,24 @@ Some of the properties and functions of a MutableCollection are given below -
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | size                                | this property returns the size of the collection.                                                                                                                                  |
 | isEmpty()                           | returns true if the collection is empty or false otherwise.                                                                                                                        |
-| contains(element: E)                | eturns true if the element specified in the argument is present in the collection.                                                                                                 |
+| contains(element: E)                | returns true if the element specified in the argument is present in the collection.                                                                                                 |
 | containsAll(element: Collection<E>) | returns true if the element in the collection passed as argument is present in the collection.                                                                                     |
 | add(element: E)                     | adds the element passed as an argument to the collection and returns true if successful or false if the collection does not support duplicates and the element is already present. |
-| remove(element: E)                  | emoves the element passed as an argument from the collection. Returns true if successful or false if it was not present in the collection.                                         |
+| remove(element: E)                  | removes the element passed as an argument from the collection. Returns true if successful or false if it was not present in the collection.                                         |
 | addAll(elements: Collection<E>)     | adds all the elements in the collection passed as arguments to the collection. Returns true if successful or false if nothing was added.                                           |
 | removeAll(elements: Collection<E>)  | removes all of the elements present in the collection passed as arguments. Returns true if successful or false if nothing was removed                                              |
 | retainAll(elements: Collection<E>)  | retains only the elements present in the collections passed as arguments. Returns true if successful or false if nothing was retained.                                             |
 | clear()                             | removes all elements from this collection.                                                                                                                                         |
 
+#### Ordered Collection vs Unordered Collection
+
+An ordered collection will have items stored in a particular order. Items in ordered collections can be accessed with their index.
+
+An unordered collection on the hand will store elements without any particular order. Here the elements usually cannot be accessed with their index.
+
 ### Lists
 
-> List is an ordered collection of itema
+> List is an ordered collection of items
 
 Lists are also of two types - 
 
@@ -100,3 +106,78 @@ The following functions can be used to create Mutable Lists -
 1. ```arrayListOf()```
 2. ```mutableListOf()```
 
+Examples can be found [here](BitterMelon.kt).
+
+:warning: toMutableList() can be used to convert an **immutable list** to a **mutable list**. 
+
+### Sets
+
+> A set is an unordered collection of unique elements. 
+
+:boom: Duplicate items cannot be present in a set. 
+
+Immutable sets can be created by using the ```setOf()``` function. 
+
+```kotlin
+var immutableSet = setOf(1, 2, 3, 5, 6, 7)
+```
+
+Mutable sets can be created using the following functions - 
+
+```kotlin
+var mutableHashSet = hashSetOf("Watermelon", "Mango", "Lemon", "Orange")
+
+var mutableTreeSet = sortedSetOf(4, 77, 200, 98)
+
+var mutableLnkedHashSet = linkedSetOf("Apple" , "Pineapple", "Orange", "Watermelon")
+
+var mutableSet = mutableSetOf(3, 5, 7, 33, 2020)
+```
+
+:warning: ```mutableSetOf``` creates a set of type ```MutableSet```
+
+Examples can be found [here](BitterMelon.kt)
+
+### Maps
+
+Map is an unordered collection in which items are stored in key-value pairs. All the keys have to be unique, their values however may not be necessarily unique.
+
+:warning: Unlike ```Set``` and ```List```, ```Map``` **doesn't extend** any interface. 
+
+Some of properties and fuctions of the Map are listed below -
+
+| Function/Property             | Description                                                                       |
+|-------------------------------|-----------------------------------------------------------------------------------|
+| ```size```                    | this property returns the size of map collection.                                 |
+| ```isEmpty()```               | returns true if the map is empty or false otherwise.                              |
+| ```containsKey(key: K)```     | returns true if the map contains the key in the argument.                         |
+| ```containsValue(value: V)``` | returns true if the map maps one or more keys to the value passed as an argument. |
+| ```get(key: K)```             | returns the value matching the given key or 'null' if none is found.              |
+| ```keys```                    | this property returns an immutable  Set of all the keys in the map.               |
+| ```values```                  | returns an immutable Collection of all the values in the map.                    |
+
+```mapOf()``` functions creates an immutable Map. 
+
+The following functions can be used to create mutable Maps - 
+
+1. ```mutableMapOf()```
+2. ```hashMapOf()```
+3. ```linkedHashMap()```
+4. ```sortedMapOf()```
+
+:warning: ```LinkedHashMap``` stores the item in the order in which they were created. 
+
+:warning: ```SortedMap``` stores the enteries in ascending order.
+
+Examples can be found [here](SweetMelon.kt).
+
+## Collection Operation Functions
+
+Some of the commonly used extension functions are as follows - 
+
+1. ```last()```
+2. ```first()```
+3. ```max()```
+4. ```average()```
+
+:star: Please have look [here](https://kotlinlang.org/docs/reference/collections-overview.html) to know more on Collections.
